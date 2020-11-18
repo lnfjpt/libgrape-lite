@@ -340,11 +340,11 @@ class ConstAdjList {
  *
  */
 struct DestList {
-  DestList(fid_t* begin_, fid_t* end_) : begin(begin_), end(end_) {}
+  DestList(const fid_t* begin_, const fid_t* end_) : begin(begin_), end(end_) {}
   inline bool Empty() { return begin == end; }
   inline bool NotEmpty() { return !Empty(); }
-  fid_t* begin;
-  fid_t* end;
+  const fid_t* begin;
+  const fid_t* end;
 };
 
 }  // namespace grape
